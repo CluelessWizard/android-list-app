@@ -7,12 +7,13 @@ import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.cluelesswizard.mylistapp.model.Product
 import com.cluelesswizard.mylistapp.overview.ApiStatus
 import com.cluelesswizard.mylistapp.overview.PhotoGridAdapter
 import com.cluelesswizard.mylistapp.model.ResponseModel
 
 @BindingAdapter("listData")
-fun bindRecyclerView(recyclerView: RecyclerView, data: List<ResponseModel>?) {
+fun bindRecyclerView(recyclerView: RecyclerView, data: List<Product>?) {
     val adapter = recyclerView.adapter as PhotoGridAdapter
     adapter.submitList(data)
 }

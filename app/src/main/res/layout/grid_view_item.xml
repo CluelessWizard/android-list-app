@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools">
     <data>
         <variable
-            name="property"
-            type="com.cluelesswizard.mylistapp.model.ResponseModel" />
+            name="product"
+            type="com.cluelesswizard.mylistapp.model.Product" />
     </data>
     <ImageView
         android:id="@+id/image"
@@ -14,7 +14,7 @@
         android:scaleType="centerCrop"
         android:adjustViewBounds="true"
         android:padding="2dp"
-        app:imageUrl="@{property.url}"
+        app:imageUrl="@{product.image}"
         tools:src="@tools:sample/backgrounds/scenic"
         android:contentDescription="@string/photo" />
 </layout>

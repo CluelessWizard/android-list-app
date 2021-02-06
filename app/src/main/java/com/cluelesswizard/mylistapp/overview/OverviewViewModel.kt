@@ -1,11 +1,13 @@
 package com.cluelesswizard.mylistapp.overview
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 //import kotlinx.coroutines.CoroutineScope
 //import kotlinx.coroutines.Dispatchers
 import androidx.lifecycle.viewModelScope
+import com.cluelesswizard.mylistapp.model.Product
 import com.cluelesswizard.mylistapp.network.ApiService
 import com.cluelesswizard.mylistapp.model.ResponseModel
 import kotlinx.coroutines.launch
@@ -21,15 +23,15 @@ class OverviewViewModel : ViewModel() {
     val status: LiveData<ApiStatus>
         get() = _status
 
-    private val _properties = MutableLiveData<List<ResponseModel>>()
+    private val _properties = MutableLiveData<ResponseModel>()
 
-    val properties: LiveData<List<ResponseModel>>
+    val properties: LiveData<ResponseModel>
         get() = _properties
 
-    private val _navigateToSelectedPhoto = MutableLiveData<ResponseModel>()
+    private val _navigateToSelectedProduct = MutableLiveData<Product>()
 
-    val navigateToSelectedPhoto: LiveData<ResponseModel>
-        get() = _navigateToSelectedPhoto
+    val navigateToSelectedPhoto: LiveData<Product>
+        get() = _navigateToSelectedProduct
 
     init {
         getApiResponse()
@@ -40,27 +42,20 @@ class OverviewViewModel : ViewModel() {
             _status.value = ApiStatus.LOADING
             try {
                 _properties.value = ApiService.retrofitService.getProperties()
-                correctPhotoURL()
                 _status.value = ApiStatus.DONE
             } catch (e: Exception) {
                 _status.value = ApiStatus.ERROR
-                _properties.value = ArrayList()
+                _properties.value = null
+                Log.e("getApiResponse", e.toString())
             }
         }
     }
 
-    private fun correctPhotoURL(){
-        for (photos in _properties.value!!){
-            photos.url = photos.url + ".png"
-            photos.thumbnailUrl = photos.thumbnailUrl + ".png"
-        }
-    }
-
-    fun displayPhotoDetails(photo: ResponseModel) {
-        _navigateToSelectedPhoto.value = photo
+    fun displayPhotoDetails(product: Product) {
+        _navigateToSelectedProduct.value = product
     }
 
     fun displayPhotoDetailsComplete() {
-        _navigateToSelectedPhoto.value = null
+        _navigateToSelectedProduct.value = null
     }
 }

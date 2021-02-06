@@ -7,7 +7,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 
-private const val URL = "https://jsonplaceholder.typicode.com/"
+private const val URL = "https://api.printful.com/"
 
 private val moshi = Moshi.Builder()
     .add(KotlinJsonAdapterFactory())
@@ -19,8 +19,8 @@ private val retrofit = Retrofit.Builder()
     .build()
 
 interface API {
-    @GET("photos")
-    suspend fun getProperties(): List<ResponseModel>
+    @GET("products")
+    suspend fun getProperties(): ResponseModel
 }
 
 object ApiService {

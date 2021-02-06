@@ -21,8 +21,8 @@
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail">
         <argument
-            android:name="selectedProperty"
-            app:argType="com.cluelesswizard.mylistapp.network.ResponseModel"
+            android:name="selectedProduct"
+            app:argType="com.cluelesswizard.mylistapp.model.Product"
             />
     </fragment>
 

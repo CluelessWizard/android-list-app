@@ -5,9 +5,7 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class ResponseModel(
-    val albumId: Int,
-    val id: Int,
-    val title: String,
-    var url: String,
-    var thumbnailUrl: String
+    val code : Int,
+    val result: List<Product>,
+    @Transient val extra: String? = null
 ): Parcelable

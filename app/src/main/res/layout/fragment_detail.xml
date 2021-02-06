@@ -22,9 +22,9 @@
             <ImageView
                 android:id="@+id/selected_photo_image"
                 android:layout_width="0dp"
-                android:layout_height="266dp"
+                android:layout_height="400dp"
                 android:scaleType="centerCrop"
-                app:imageUrl="@{viewModel.selectedPhoto.url}"
+                app:imageUrl="@{viewModel.selectedProduct.image}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -36,7 +36,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="@{viewModel.selectedPhoto.title}"
+                android:text="@{viewModel.selectedProduct.model}"
                 android:textColor="#de000000"
                 android:textSize="39sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -47,7 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text='@{"Album ID: " + viewModel.selectedPhoto.albumId}'
+                android:text='@{viewModel.selectedProduct.description}'
                 android:textColor="#de000000"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"

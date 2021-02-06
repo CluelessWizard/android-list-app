@@ -4,17 +4,18 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.cluelesswizard.mylistapp.model.Product
 import com.cluelesswizard.mylistapp.model.ResponseModel
 
-class DetailViewModel(photo: ResponseModel, app: Application) : AndroidViewModel(app) {
-    private val _selectedPhoto = MutableLiveData<ResponseModel>()
+class DetailViewModel(product: Product, app: Application) : AndroidViewModel(app) {
+    private val _selectedProduct = MutableLiveData<Product>()
 
     // The external LiveData for the SelectedPhoto
-    val selectedPhoto: LiveData<ResponseModel>
-        get() = _selectedPhoto
+    val selectedProduct: LiveData<Product>
+        get() = _selectedProduct
 
     init {
-        _selectedPhoto.value = photo
+        _selectedProduct.value = product
     }
 
 }
