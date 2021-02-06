@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">My list app</string>
+    <string name="photo">Photo</string>
 </resources>
