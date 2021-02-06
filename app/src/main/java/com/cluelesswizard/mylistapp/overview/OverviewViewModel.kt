@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 //import kotlinx.coroutines.Dispatchers
 import androidx.lifecycle.viewModelScope
 import com.cluelesswizard.mylistapp.network.ApiService
-import com.cluelesswizard.mylistapp.network.ResponseModel
+import com.cluelesswizard.mylistapp.model.ResponseModel
 import kotlinx.coroutines.launch
 
 enum class ApiStatus { LOADING, ERROR, DONE }

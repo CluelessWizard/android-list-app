@@ -1,5 +1,6 @@
 package com.cluelesswizard.mylistapp.network
 
+import com.cluelesswizard.mylistapp.model.ResponseModel
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit

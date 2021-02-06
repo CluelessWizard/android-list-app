@@ -5,7 +5,7 @@
     <data>
         <variable
             name="property"
-            type="com.cluelesswizard.mylistapp.network.ResponseModel" />
+            type="com.cluelesswizard.mylistapp.model.ResponseModel" />
     </data>
     <ImageView
         android:id="@+id/image"

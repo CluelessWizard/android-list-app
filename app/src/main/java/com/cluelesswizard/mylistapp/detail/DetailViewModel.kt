@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.cluelesswizard.mylistapp.network.ResponseModel
+import com.cluelesswizard.mylistapp.model.ResponseModel
 
 class DetailViewModel(photo: ResponseModel, app: Application) : AndroidViewModel(app) {
     private val _selectedPhoto = MutableLiveData<ResponseModel>()

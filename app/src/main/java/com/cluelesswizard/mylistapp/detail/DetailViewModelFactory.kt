@@ -3,7 +3,7 @@ package com.cluelesswizard.mylistapp.detail
 import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.cluelesswizard.mylistapp.network.ResponseModel
+import com.cluelesswizard.mylistapp.model.ResponseModel
 
 class DetailViewModelFactory(
     private val photo: ResponseModel,

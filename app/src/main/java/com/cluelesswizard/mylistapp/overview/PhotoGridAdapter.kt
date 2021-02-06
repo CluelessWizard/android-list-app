@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.cluelesswizard.mylistapp.databinding.GridViewItemBinding
-import com.cluelesswizard.mylistapp.network.ResponseModel
+import com.cluelesswizard.mylistapp.model.ResponseModel
 
 class PhotoGridAdapter( val onClickListener: OnClickListener ) :
     ListAdapter<ResponseModel, PhotoGridAdapter.PhotoViewHolder>(DiffCallback) {
@@ -47,7 +47,7 @@ class PhotoGridAdapter( val onClickListener: OnClickListener ) :
     }
 
     /** Custom listener that handles clicks on [RecyclerView] items.*/
-    class OnClickListener(val clickListener: (property:ResponseModel) -> Unit) {
-        fun onClick(property:ResponseModel) = clickListener(property)
+    class OnClickListener(val clickListener: (property: ResponseModel) -> Unit) {
+        fun onClick(property: ResponseModel) = clickListener(property)
     }
 }

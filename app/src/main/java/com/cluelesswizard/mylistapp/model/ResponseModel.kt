@@ -1,4 +1,4 @@
-package com.cluelesswizard.mylistapp.network
+package com.cluelesswizard.mylistapp.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
