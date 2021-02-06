@@ -2,12 +2,19 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="property"
+            type="com.cluelesswizard.mylistapp.network.ResponseModel" />
+    </data>
     <ImageView
-        android:id="@+id/mars_image"
+        android:id="@+id/image"
         android:layout_width="match_parent"
         android:layout_height="170dp"
         android:scaleType="centerCrop"
         android:adjustViewBounds="true"
         android:padding="2dp"
-        tools:src="@tools:sample/backgrounds/scenic"/>
+        app:imageUrl="@{property.url}"
+        tools:src="@tools:sample/backgrounds/scenic"
+        android:contentDescription="@string/photo" />
 </layout>

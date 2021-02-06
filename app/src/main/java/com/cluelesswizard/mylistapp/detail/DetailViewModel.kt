@@ -2,9 +2,19 @@ package com.cluelesswizard.mylistapp.detail
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.ViewModel
-import com.cluelesswizard.mylistapp.detail.DetailFragment
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import com.cluelesswizard.mylistapp.network.ResponseModel
 
-class DetailViewModel(@Suppress("UNUSED_PARAMETER")response: ResponseModel, app: Application) : AndroidViewModel(app) {
+class DetailViewModel(photo: ResponseModel, app: Application) : AndroidViewModel(app) {
+    private val _selectedPhoto = MutableLiveData<ResponseModel>()
+
+    // The external LiveData for the SelectedPhoto
+    val selectedPhoto: LiveData<ResponseModel>
+        get() = _selectedPhoto
+
+    init {
+        _selectedPhoto.value = photo
+    }
+
 }

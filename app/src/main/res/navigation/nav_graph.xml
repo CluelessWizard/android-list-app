@@ -20,6 +20,10 @@
         android:name="com.cluelesswizard.mylistapp.detail.DetailFragment"
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="selectedProperty"
+            app:argType="com.cluelesswizard.mylistapp.network.ResponseModel"
+            />
     </fragment>
 
 </navigation>
