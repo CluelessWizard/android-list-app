@@ -37,6 +37,14 @@ class OverviewFragment : Fragment() {
             }
         })
 
+        viewModel.status.observe(this, {
+            // Showing CircularProgressIndicator if status is LOADING
+            if (it == ApiStatus.LOADING)
+                binding.progressCircular.visibility = View.VISIBLE
+            else
+                binding.progressCircular.visibility = View.INVISIBLE
+        })
+
         return binding.root
     }
 }

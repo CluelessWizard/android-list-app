@@ -1,6 +1,6 @@
 package com.cluelesswizard.mylistapp.overview
 
-import android.util.Log
+//import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -46,7 +46,7 @@ class OverviewViewModel : ViewModel() {
             } catch (e: Exception) {
                 _status.value = ApiStatus.ERROR
                 _properties.value = null
-                Log.e("getApiResponse", e.toString())
+//                Log.e("getApiResponse", e.toString())
             }
         }
     }
