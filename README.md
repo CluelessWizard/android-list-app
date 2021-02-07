@@ -14,8 +14,8 @@ You will need internet connection in order to be connected to the API. If you're
 
 ## Screenshots
 <p align="center">
-<img src=screenshots/Screenshot_20210207-155341.jpg width=30% height=30%>
-<img src=screenshots/Screenshot_20210207-155359.jpg width=30% height=30%>
+<img src=screenshots/Screenshot_20210207-171137.jpg width=30% height=30%>
+<img src=screenshots/Screenshot_20210207-171311.jpg width=30% height=30%>
 </p>
 <p align="center">
 <img src=screenshots/Screenshot_20210207-163024.jpg width=30% height= 30%>
